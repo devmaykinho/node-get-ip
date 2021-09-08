@@ -8,10 +8,6 @@ app.use(express.json());
 
 const ip = await getIp();
 
-app.use('/health', (req, res) => {
-    res.status(200).json({message: 'server is health'})
-})
-
 app.use('/', (req, res) => {
     res.status(200).json({message: 'Hellow word! My Ip address is ' + ip})
 })
